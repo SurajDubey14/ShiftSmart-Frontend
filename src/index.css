@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  /* 🔵 Primary Brand */
+  --color-primary: #1d4ed8;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1e40af;
+
+  /* ⚪ Backgrounds */
+  --color-bg-main: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-bg-section: #eff6ff;
+
+  /* 🔤 Text Colors */
+  --color-text-heading: #0f172a;
+  --color-text-subheading: #1e293b;
+  --color-text-normal: #475569;
+  --color-text-muted: #94a3b8;
+
+  /* ✅ Status Colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* 🎯 Border & UI */
+  --color-border: #e2e8f0;
+
+  /* 🌈 Gradient */
+  --gradient-primary: linear-gradient(135deg, #1d4ed8, #3b82f6);
+}
