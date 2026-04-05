@@ -97,7 +97,7 @@ const Footer = () => {
 
       {/* 🔻 Bottom Bar */}
       <div className="border-t border-white/20 text-center text-sm text-gray-400 py-4 px-4">
-        © 2026 ShiftSmart®. All Rights Reserved
+        © {new Date().getFullYear()} ShiftSmart®. All Rights Reserved
       </div>
     </footer>
   );

@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <>
       {/* 🔵 Navbar */}
-      <div className="shadow-xl px-6 md:px-20 py-3 mb-5 flex items-center justify-between">
+      <div className="lg:shadow-xl px-6 md:px-20 py-3 flex items-center justify-between">
         {/* Logo */}
         <div>
           <Link to={"/"}>
@@ -59,22 +59,25 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="#" className="hover:font-semibold">
+              <Link to="/booking" className="hover:font-semibold">
                 Book Your Slot
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="#" className="hover:font-semibold">
                 Support
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/contact" className="hover:font-semibold">
                 Contact
               </Link>
             </li>
             <li>
-              <Link to={"/auth/login"} className="bg-[var(--color-primary)] active:scale-95 text-white px-4 py-2 rounded-md">
+              <Link
+                to={"/auth/login"}
+                className="bg-[var(--color-primary)] active:scale-95 text-white px-4 py-2 rounded-md"
+              >
                 Sign In
               </Link>
             </li>
@@ -128,22 +131,26 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="#" onClick={() => setMenuOpen(false)}>
+              <Link to="/booking" onClick={() => setMenuOpen(false)}>
                 Book Your Slot
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="#" onClick={() => setMenuOpen(false)}>
                 Support
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/contact" onClick={() => setMenuOpen(false)}>
                 Contact
               </Link>
             </li>
             <li>
-              <Link to={"/auth/login"} onClick={() => setMenuOpen(false)} className="bg-[var(--color-primary)] text-white px-4 py-2 rounded-md w-full">
+              <Link
+                to={"/auth/login"}
+                onClick={() => setMenuOpen(false)}
+                className="bg-(--color-primary) text-white px-4 py-2 rounded-md w-full"
+              >
                 Sign In
               </Link>
             </li>

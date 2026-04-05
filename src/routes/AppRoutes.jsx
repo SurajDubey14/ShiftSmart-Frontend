@@ -7,6 +7,7 @@ import About from "../pages/About.jsx";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login.jsx";
 import Signup from "../pages/Signup.jsx";
+import Booking from "../pages/Booking.jsx";
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/auth/login" element={<Login />} />
           <Route path="/auth/signup" element={<Signup />} />
         </Route>

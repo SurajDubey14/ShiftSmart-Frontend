@@ -3,8 +3,8 @@ import { Tally1, MailPlus, Phone } from "lucide-react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 const Contact = () => {
   return (
-    <div className="flex items-center justify-center px-4">
-      <div className="bg-white p-4 flex flex-col lg:flex-row shadow-2xl rounded-xl w-full max-w-6xl">
+    <div className="flex items-center justify-center lg:p-4 " >
+      <div className="bg-white p-4 flex flex-col lg:flex-row gap-y-6 lg:gap-x-4 lg:shadow-2xl rounded-xl w-full max-w-6xl">
         {/* 🔵 Left Side */}
         <div className="bg-[#161616] rounded-xl text-white py-10 px-5 flex flex-col gap-y-6 w-full lg:w-1/3">
           <h1 className="text-2xl font-semibold">Contact Information</h1>

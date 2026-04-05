@@ -8,7 +8,7 @@ const AppLayout = () => {
     <div>
       <TopHeader />
       <Header />
-      <main className="py-10">
+      <main className="">
         <Outlet />
       </main>
 

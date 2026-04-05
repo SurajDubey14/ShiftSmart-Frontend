@@ -1,96 +1,83 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="w-full bg-(--color-bg-main) text-(--color-text-normal)">
+    <div className="py-12 px-4 sm:px-6 lg:px-16">
+      {/* 🔵 STORY SECTION */}
+      <div className="flex items-center justify-between lg:flex-row flex-col gap-10 mb-10">
+        {/* TEXT */}
+        <div className="w-full lg:w-1/2">
+          <p className="bg-gray-400 text-xs sm:text-sm font-bold px-4 py-2 rounded-full text-white w-fit">
+            OUR STORY
+          </p>
 
-      {/* 🔵 HERO SECTION */}
-      <section className="bg-(--gradient-primary)  py-20 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          ShiftSmart
-        </h1>
-        <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-          Move Smarter, Live Better.
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold pt-5 leading-snug">
+            Redefining Seamless Relocation Across India!
+          </h1>
+
+          <p className="text-base sm:text-lg lg:text-xl pt-5 leading-relaxed">
+            ShiftSmart is a modern relocation platform designed to make moving
+            simple and stress-free. We handle home, office, and vehicle shifting
+            with a focus on safety, speed, and affordability. With trusted
+            partners and a growing presence across multiple cities, we ensure
+            reliable service every time. Our goal is to make every move secure,
+            efficient, and truly hassle-free.
+          </p>
+
+          <Link to={"/contact"}>
+            <button className="uppercase flex items-center gap-x-2 hover:bg-gray-400 hover:text-white text-xs sm:text-sm cursor-pointer font-bold mt-6 pl-2 text-blue-700 transition">
+              contact now
+              <span className="bg-gray-700 text-white p-1 rounded">
+                <ArrowUpRight strokeWidth={1.5} />
+              </span>
+            </button>
+          </Link>
+        </div>
+
+        {/* IMAGE */}
+        <div className="w-full lg:w-96">
+          <img
+            src="./package.jpg"
+            alt="package"
+            className="w-full h-auto rounded-xl shadow-md"
+          />
+        </div>
+      </div>
+
+      {/* 🔵 FOUNDER SECTION */}
+      <div className="text-center flex items-center justify-center flex-col lg:mt-16 gap-6">
+        <p className="bg-gray-400 text-sm font-bold px-4 py-2 rounded-full text-white ">
+          Our Founder & CEO
         </p>
-      </section>
+        <div className="flex items-center justify-center lg:flex-row flex-col lg:h-96">
+          {/* founder img */}
+          <img
+            src="./founder.jpg"
+            alt="founder"
+            className="w-64 shadow-2xl rounded-tr-3xl lg:rounded-bl-3xl"
+          />
+          <div className="bg-gray-200 w-64 h-full shadow-2xl rounded-bl-3xl lg:rounded-br-3xl text-left lg:rounded-tl-3xl p-5">
+            <h1 className="text-sm font-semibold">Suraj Dubey</h1>
+            <p className="text-xs pt-1 pb-3 border-black border-b">
+              Founder & CEO
+            </p>
 
-      {/* ⚪ ABOUT CONTENT */}
-      <section className="py-16 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        
-        {/* Left */}
-        <div>
-          <h2 className="text-3xl font-bold text-(--color-text-heading) mb-4">
-            Who We Are
-          </h2>
-          <p className="mb-4">
-            ShiftSmart is your trusted partner for smooth and hassle-free
-            relocation. Whether you're moving homes, offices, or goods, we
-            simplify the entire process with smart solutions and reliable
-            services.
-          </p>
-          <p>
-            Our mission is to make shifting stress-free, efficient, and
-            affordable — so you can focus on what truly matters.
-          </p>
-        </div>
+            <p className="text-xs font-thin pt-5">
+              With over 13 years of experience in Human Resources at companies
+              like Nokia and Vodafone, Ajay Tiwari understands the challenges
+              employees face during relocations.
+            </p>
 
-        {/* Right */}
-        <div className="bg-[var(--color-bg-card)] shadow-xl rounded-2xl p-6 border border-[var(--color-border)]">
-          <h3 className="text-xl font-semibold mb-4 text-[var(--color-text-heading)]">
-            Why Choose Us?
-          </h3>
-          <ul className="space-y-3">
-            <li>✅ Fast & Reliable Service</li>
-            <li>✅ Affordable Pricing</li>
-            <li>✅ Verified Movers</li>
-            <li>✅ Real-Time Tracking</li>
-            <li>✅ 24/7 Customer Support</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* 🔵 FEATURES / VALUES */}
-      <section className="bg-[var(--color-bg-section)] py-16 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          
-          <h2 className="text-3xl font-bold text-[var(--color-text-heading)] mb-10">
-            Our Core Values
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Trust</h3>
-              <p>We ensure secure and dependable relocation services.</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Efficiency</h3>
-              <p>Smart planning for faster and smoother shifting.</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Customer First</h3>
-              <p>Your satisfaction is our top priority.</p>
-            </div>
-
+            <p className="text-xs text-blue-600 font-thin pt-5">
+              “Relocations shouldn’t be stressful — they should be seamless,
+              secure, and supported by technology.”
+            </p>
           </div>
         </div>
-      </section>
-
-      {/* ⚪ CTA */}
-      <section className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold text-[var(--color-text-heading)] mb-4">
-          Ready to Move?
-        </h2>
-        <p className="mb-6 text-[var(--color-text-muted)]">
-          Let ShiftSmart handle your move with ease.
-        </p>
-        <button className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white px-6 py-3 rounded-lg transition">
-          Get Started
-        </button>
-      </section>
-
+      </div>
     </div>
   );
 };
