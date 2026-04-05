@@ -52,14 +52,14 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden lg:block">
-          <ul className="flex items-center gap-x-10 text-sm">
+          <ul className="flex items-center gap-x-12 text-sm">
             <li>
-              <Link to="/about" className="hover:font-semibold">
+              <Link to="/about" className="relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/booking" className="hover:font-semibold">
+              <Link to="/booking" className="relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all">
                 Book Your Slot
               </Link>
             </li>
@@ -69,14 +69,14 @@ const Header = () => {
               </Link>
             </li> */}
             <li>
-              <Link to="/contact" className="hover:font-semibold">
+              <Link to="/contact" className="relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-blue-600 hover:after:w-full after:transition-all">
                 Contact
               </Link>
             </li>
             <li>
               <Link
                 to={"/auth/login"}
-                className="bg-[var(--color-primary)] active:scale-95 text-white px-4 py-2 rounded-md"
+                className="bg-(--color-primary) active:scale-95 text-white px-4 py-2 rounded-md"
               >
                 Sign In
               </Link>

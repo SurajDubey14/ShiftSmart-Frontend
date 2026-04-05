@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const formsubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Submitted");
+  };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center py-16 px-6">
       <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
         <h1 className="text-2xl font-semibold text-center mb-2">Login</h1>
         {/* Login redirect */}
@@ -20,7 +24,7 @@ const Login = () => {
           </Link>
         </p>
 
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onClick={formsubmit}>
           {/* Email */}
           <input
             type="email"

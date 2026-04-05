@@ -82,22 +82,18 @@ const Home = () => {
           Hassle-free shifting services for homes, offices, and more.
         </p>
         <Link to="/booking">
-          <button className="bg-blue-700 cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition">
+          <button className="bg-[#1E40AF] cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition">
             Book Your Slot
           </button>
         </Link>
       </section>
-
-      {/* <motion.div ref={ref} style={{ clipPath }} >
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" className="bg-black" alt="Revealed image" />
-      </motion.div> */}
 
       {/* ⚪ SERVICES */}
       <section className="py-16 px-3 lg:px-6 bg-[#F7F7F7] flex flex-col items-center justify-center">
         <p className="bg-white rounded-full px-4 py-2 font-medium text-sm">
           Trusted by thousand of people +
         </p>
-        <h2 className="text-3xl text-blue-400 py-4 leading-snug text-center">
+        <h2 className="text-3xl text-[#1E40AF] py-4 leading-snug text-center">
           Our Services
         </h2>
 
@@ -123,7 +119,7 @@ const Home = () => {
       {/* 🔵 FEATURES */}
       <section className=" bg-black py-16 px-3 lg:px-6 text-center">
         <h2 className="text-3xl font-bold text-white mb-10">
-          Why Choose <span className="text-blue-600">ShiftSmart?</span>
+          Why Choose <span className="text-[#1E40AF]">ShiftSmart?</span>
         </h2>
 
         <div className="flex items-center justify-center lg:flex-row flex-col gap-x-4">
@@ -161,14 +157,14 @@ const Home = () => {
       {/* ⚪ HOW IT WORKS */}
       <section className="py-16 px-3 lg:px-6 text-center ">
         <h2 className="text-3xl font-bold mb-10">
-          How It <span className="text-blue-600">Works?</span>
+          How It <span className="text-[#1E40AF]">Works?</span>
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-5xl mx-auto">
           {works.map((items, index) => {
             return (
-              <div className="bg-gray-300 group hover:bg-blue-700 hover:text-white flex items-start justify-center gap-x-4 p-4 lg:py-5 rounded-2xl">
-                <div className="bg-white group-hover:text-blue-700  text-sm px-3 py-1.5  font-bold rounded-full">
+              <div className="bg-gray-300 group hover:bg-[#1E40AF] hover:text-white flex items-start justify-center gap-x-4 p-4 lg:py-5 rounded-2xl">
+                <div className="bg-white group-hover:text-[#1E40AF]  text-sm px-3 py-1.5  font-bold rounded-full">
                   {index + 1}
                 </div>
                 <div className="data text-left">
