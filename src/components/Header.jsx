@@ -103,7 +103,7 @@ const Header = () => {
       <div
         className={`lg:hidden fixed top-0 left-0 w-full h-screen backdrop-blur-sm transform ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300`}
+        } transition-transform duration-300 z-10`}
       >
         <div className="bg-white w-3/4 h-full p-6">
           {/* Close Button */}
@@ -143,7 +143,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to={"/auth/login"} className="bg-[var(--color-primary)] text-white px-4 py-2 rounded-md w-full">
+              <Link to={"/auth/login"} onClick={() => setMenuOpen(false)} className="bg-[var(--color-primary)] text-white px-4 py-2 rounded-md w-full">
                 Sign In
               </Link>
             </li>
