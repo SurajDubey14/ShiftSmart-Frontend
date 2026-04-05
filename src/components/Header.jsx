@@ -123,7 +123,7 @@ const Header = () => {
           {/* Menu Links */}
           <ul className="flex flex-col gap-6 mt-10 text-lg">
             <li>
-              <Link to="#" onClick={() => setMenuOpen(false)}>
+              <Link to="/about" onClick={() => setMenuOpen(false)}>
                 About
               </Link>
             </li>
@@ -138,7 +138,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="#" onClick={() => setMenuOpen(false)}>
+              <Link to="/contact" onClick={() => setMenuOpen(false)}>
                 Contact
               </Link>
             </li>
