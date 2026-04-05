@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <>
       {/* 🔵 Navbar */}
-      <div className="shadow-2xl px-6 md:px-20 py-3 mb-5 flex items-center justify-between">
+      <div className="shadow-xl px-6 md:px-20 py-3 mb-5 flex items-center justify-between">
         {/* Logo */}
         <div>
           <Link to={"/"}>
@@ -74,9 +74,9 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <button className="bg-[var(--color-primary)] active:scale-95 text-white px-4 py-2 rounded-md">
+              <Link to={"/auth/login"} className="bg-[var(--color-primary)] active:scale-95 text-white px-4 py-2 rounded-md">
                 Sign In
-              </button>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -143,9 +143,9 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <button className="bg-[var(--color-primary)] text-white px-4 py-2 rounded-md w-full">
+              <Link to={"/auth/login"} className="bg-[var(--color-primary)] text-white px-4 py-2 rounded-md w-full">
                 Sign In
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
