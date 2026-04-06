@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-16">
+    <div className="py-12 px-3 sm:px-6 lg:px-16">
       {/* 🔵 STORY SECTION */}
       <div className="flex items-center justify-between lg:flex-row flex-col gap-10 mb-10">
         {/* TEXT */}

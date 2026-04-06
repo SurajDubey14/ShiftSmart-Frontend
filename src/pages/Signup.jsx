@@ -12,7 +12,7 @@ const Signup = () => {
 
   return (
     <div className="flex items-center justify-center py-16 px-6">
-      <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+      <div className="bg-white p-6 rounded-lg lg:shadow-md w-full max-w-sm">
         <h1 className="text-2xl font-semibold text-center mb-5">Sign Up</h1>
 
         <form className="flex flex-col gap-4" onClick={formsubmit}>

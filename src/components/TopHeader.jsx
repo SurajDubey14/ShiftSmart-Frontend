@@ -3,11 +3,11 @@ import { Tally1, MailPlus, Phone } from "lucide-react";
 import {} from "lucide-react";
 const TopHeader = () => {
   return (
-    <div class="bg-[var(--color-primary)] hidden text-sm text-center text-white lg:flex items-center flex-col lg:flex-row lg:border-b-2 lg:border-white justify-between lg:px-56 py-2 shadow-2xl">
+    <div className="bg-[var(--color-primary)] hidden text-sm text-center text-white lg:flex items-center flex-col lg:flex-row lg:border-b-2 lg:border-white justify-between lg:px-56 py-2 shadow-2xl">
       <div className="border-b border-white lg:border-none py-2 lg:p-0">
         ShiftSmart – Move Smarter, Live Better.
       </div>
-      <div class="flex items-center flex-col lg:flex-row text-center justify-center gap-y-2 lg:gap-x-4 py-4 lg:p-0">
+      <div className="flex items-center flex-col lg:flex-row text-center justify-center gap-y-2 lg:gap-x-4 py-4 lg:p-0">
         <div className="mob text-xs font-semibold leading-snug">
           <a
             href="tel:+91-9310745399"

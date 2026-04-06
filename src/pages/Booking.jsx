@@ -1,11 +1,205 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Booking = () => {
-  return (
-    <div>
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores excepturi iusto id molestiae totam nemo mollitia quam. Alias ullam nostrum similique quam iure fugit autem enim corporis animi dolor dolore omnis ab amet, exercitationem laudantium quisquam eos deleniti provident sequi saepe a ea in. Pariatur nisi quis, reprehenderit ex aperiam non culpa sint cum voluptatibus dolor eius saepe porro minima libero quo reiciendis at vel eum in? Laborum ipsum tenetur, obcaecati sapiente rerum ratione! Delectus velit dolores dolorum voluptate aliquam dolore provident nemo iure excepturi maxime non voluptatibus quas ullam doloribus ipsum nostrum, unde nulla numquam consequatur nesciunt, ipsa at? Pariatur fuga asperiores, magni obcaecati vitae ab aspernatur voluptatibus atque dolor sed, adipisci quaerat eos ipsum beatae nesciunt facere enim quae dicta laudantium, quo eligendi id illum. Iure, dignissimos eveniet maiores esse voluptates obcaecati aperiam, sint numquam adipisci debitis harum dolorum dolores ad ut dolorem animi vitae sit hic facere rerum non consequuntur. Ducimus libero illum nulla enim non quo veniam error aut. Error voluptatum est vero harum magnam dicta, dolor eveniet, facilis libero nam debitis. Facere ad laborum, delectus quasi exercitationem nobis accusamus necessitatibus voluptas deleniti optio sint enim repudiandae aliquid, tempore eius dicta est sed sunt quas praesentium nisi labore rerum, molestiae numquam! Itaque quam in molestiae non nesciunt aliquam temporibus consequatur pariatur doloribus. Itaque recusandae incidunt deserunt voluptatibus laborum? Repudiandae accusantium quisquam ipsa hic perspiciatis obcaecati dolore ex consequatur excepturi deserunt veniam esse perferendis sed commodi quaerat debitis, error odit ut explicabo adipisci voluptatibus est impedit necessitatibus.</h1>
-    </div>
-  )
-}
+  const drivers = [
+    {
+      id: 1,
+      name: "Ravi Kumar",
+      phone: "9876543210",
+      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      vehicle: "Mini Truck",
+      pickupLocation: "Noida",
+      dropLocation: "Delhi",
+    },
+    {
+      id: 1,
+      name: "Ravi Kumar",
+      phone: "9876543210",
+      image: "https://randomuser.me/api/portraits/men/7.jpg",
+      vehicle: "Mini Truck",
+      pickupLocation: "Noida",
+      dropLocation: "Greater Noida",
+    },
+    {
+      id: 2,
+      name: "Amit Sharma",
+      phone: "9812345678",
+      image: "https://randomuser.me/api/portraits/men/2.jpg",
+      vehicle: "Pickup Van",
+      pickupLocation: "Greater Noida",
+      dropLocation: "Ghaziabad",
+    },
+    {
+      id: 3,
+      name: "Sandeep Yadav",
+      phone: "9898989898",
+      image: "https://randomuser.me/api/portraits/men/3.jpg",
+      vehicle: "Large Truck",
+      pickupLocation: "Delhi",
+      dropLocation: "Gurgaon",
+    },
+    {
+      id: 4,
+      name: "Imran Khan",
+      phone: "9765432109",
+      image: "https://randomuser.me/api/portraits/men/4.jpg",
+      vehicle: "Mini Truck",
+      pickupLocation: "Ghaziabad",
+      dropLocation: "Noida",
+    },
+    {
+      id: 5,
+      name: "Deepak Verma",
+      phone: "9123456780",
+      image: "https://randomuser.me/api/portraits/men/5.jpg",
+      vehicle: "Pickup Van",
+      pickupLocation: "Gurgaon",
+      dropLocation: "Greater Noida",
+    },
+    {
+      id: 6,
+      name: "Rahul Singh",
+      phone: "9988776655",
+      image: "https://randomuser.me/api/portraits/men/6.jpg",
+      vehicle: "Large Truck",
+      pickupLocation: "Noida",
+      dropLocation: "Ghaziabad",
+    },
+  ];
 
-export default Booking
+  const [form, setForm] = useState({
+    pickup: "",
+    drop: "",
+    date: "",
+    time: "",
+    phone: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Booking Data:", form);
+    alert("✅ Slot Booked Successfully!");
+
+    setForm({
+      pickup: "",
+      drop: "",
+      date: "",
+      time: "",
+      phone: "",
+    });
+  };
+
+  // 🔥 Filter Logic
+  const filteredDrivers = drivers.filter((driver) => {
+    const pickupMatch = driver.pickupLocation
+      .toLowerCase()
+      .includes(form.pickup.toLowerCase());
+
+    const dropMatch = driver.dropLocation
+      .toLowerCase()
+      .includes(form.drop.toLowerCase());
+
+    return pickupMatch && dropMatch;
+  });
+
+  return (
+    <div className="min-h-screen bg-gray-100 px-4 py-10">
+      {/* FORM */}
+      <div className="flex items-center justify-center mb-10">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white p-6 rounded-xl shadow-lg w-full max-w-md flex flex-col gap-4"
+        >
+          <h1 className="text-2xl font-bold text-center">
+            🚚 Book Your Shift
+          </h1>
+
+          <input
+            type="text"
+            name="pickup"
+            placeholder="Pickup Location"
+            value={form.pickup}
+            onChange={handleChange}
+            className="border p-2 rounded"
+          />
+
+          <input
+            type="text"
+            name="drop"
+            placeholder="Drop Location"
+            value={form.drop}
+            onChange={handleChange}
+            className="border p-2 rounded"
+          />
+
+          <input
+            type="date"
+            name="date"
+            value={form.date}
+            onChange={handleChange}
+            className="border p-2 rounded"
+          />
+
+          <input
+            type="time"
+            name="time"
+            value={form.time}
+            onChange={handleChange}
+            className="border p-2 rounded"
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={form.phone}
+            onChange={handleChange}
+            className="border p-2 rounded"
+          />
+
+          <button
+            type="submit"
+            className="bg-black text-white py-2 rounded hover:bg-gray-800"
+          >
+            Book Slot
+          </button>
+        </form>
+      </div>
+
+      {/* DRIVERS */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {filteredDrivers.length > 0 ? (
+          filteredDrivers.map((driver) => (
+            <div key={driver.id} className="bg-white p-4 rounded-xl shadow">
+              <img
+                src={driver.image}
+                alt={driver.name}
+                className="w-20 h-20 rounded-full mx-auto"
+              />
+              <h2 className="text-center font-bold mt-2">
+                {driver.name}
+              </h2>
+              <p className="text-center text-sm">{driver.phone}</p>
+              <p className="text-center text-sm mt-2">
+                🚚 {driver.vehicle}
+              </p>
+              <p className="text-center text-sm">
+                📍 {driver.pickupLocation} → {driver.dropLocation}
+              </p>
+            </div>
+          ))
+        ) : (
+          <p className="col-span-full text-center text-gray-500">
+            No drivers found 😢
+          </p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Booking;
