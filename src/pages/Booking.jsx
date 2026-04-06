@@ -139,6 +139,7 @@ const Booking = () => {
           <input
             type="date"
             name="date"
+            placeholder="Shifting Date"
             value={form.date}
             onChange={handleChange}
             className="border p-2 rounded"
@@ -147,6 +148,7 @@ const Booking = () => {
           <input
             type="time"
             name="time"
+            placeholder="Shifting Time"
             value={form.time}
             onChange={handleChange}
             className="border p-2 rounded"
