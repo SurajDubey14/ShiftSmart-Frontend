@@ -74,7 +74,7 @@ const Home = () => {
   return (
     <div className="">
       {/* 🔵 HERO SECTION */}
-      <section className="h-screen bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('./relocationbanner.jpg')] bg-cover bg-center text-white flex text-center items-center flex-col justify-center">
+     <section className="h-screen bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/relocationbanner.jpg')] bg-cover bg-center text-white flex text-center items-center flex-col justify-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Move Smarter with ShiftSmart
         </h1>
