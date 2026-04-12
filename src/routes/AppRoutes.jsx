@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import AppLayout from "../layout/AppLayout.jsx";
 import Home from "../pages/Home.jsx";
@@ -8,12 +8,12 @@ import Contact from "../pages/Contact";
 import Login from "../pages/Login.jsx";
 import Signup from "../pages/Signup.jsx";
 import Booking from "../pages/Booking.jsx";
+import NotFound from "../pages/NotFound.jsx";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-
         {/* Layout Wrapper */}
         <Route path="/" element={<AppLayout />}>
           {/* Pages */}
@@ -23,10 +23,15 @@ const AppRoutes = () => {
           <Route path="/booking" element={<Booking />} />
           <Route path="/auth/login" element={<Login />} />
           <Route path="/auth/signup" element={<Signup />} />
-        </Route>
 
+          {/* Not found page */}
+        </Route>
       </Routes>
-    </BrowserRouter>
+      
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 };
 
